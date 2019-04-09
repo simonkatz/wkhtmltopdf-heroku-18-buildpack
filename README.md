@@ -6,7 +6,7 @@ binary with your environment.
 ## Versions
 
 * Buildpack:   `0.1`
-* wkhtmltopdf: `0.12.3` by default
+* wkhtmltopdf: `0.12.5-1.bionic_amd64.deb` by default
 
 ## Usage
 
