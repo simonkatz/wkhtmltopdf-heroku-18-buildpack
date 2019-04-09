@@ -5,7 +5,7 @@ binary with your environment.
 
 ## Versions
 
-* Buildpack:   `0.2`
+* Buildpack:   `0.1`
 * wkhtmltopdf: `0.12.3` by default
 
 ## Usage
@@ -15,15 +15,18 @@ and `wkhtmltoimage` binaries, and the corresponding library `libwkhtmltox`,
 into the dynos:
 
 ```bash
-$ heroku buildpacks:add https://github.com/dscout/wkhtmltopdf-buildpack.git
+$ heroku buildpacks:add https://github.com/dscout/wkhtmltopdf-buildpack.git --index 1
 ```
 
-If you want to use a `wkhtmltopdf` version other than 0.12.3, set
+If you want to use a `wkhtmltopdf` version other than the default set
 `WKHTMLTOPDF_VERSION`:
 
 ```bash
-heroku config:set WKHTMLTOPDF_VERSION="0.12.4"
+heroku config:set WKHTMLTOPDF_DOWNLOAD_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
 ```
+
+You can see all the releases here:
+https://github.com/wkhtmltopdf/wkhtmltopdf/releases/
 
 ### Clearing Repo Cache
 
@@ -35,14 +38,9 @@ $ heroku plugins:install https://github.com/heroku/heroku-repo.git
 $ heroku repo:purge_cache -a appname
 ```
 
-## Troubleshooting
+## Credits
 
-If you run into issues when trying to deploy with this buildpack, make sure your
-app is running on `cedar-14` or `heroku-16`. You can check this with:
-
-```bash
-$ heroku stack
-```
+Most of this code was from the [dscout/wkhtmltopdf-buildpack](https://github.com/dscout/wkhtmltopdf-buildpack)
 
 [0]: http://devcenter.heroku.com/articles/buildpacks
 [1]: http://wkhtmltopdf.org/
