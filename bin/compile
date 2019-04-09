@@ -31,8 +31,8 @@ FONTS_DIR=$(cd "$BIN_DIR/../fonts"; pwd)
 if [ -f $WKHTMLTOPDF_TAR ]; then
   echo "-----> Using wkhtmltopdf tar from cache"
 else
-  echo "-----> Downloading wkhtmltopdf tar: $WKHTMLTOPDF_URL"
-  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_TAR
+  echo "-----> Downloading wkhtmltopdf deb: $WKHTMLTOPDF_URL"
+  curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_DEB
 fi
 
 echo "-----> Unpacking deb"
