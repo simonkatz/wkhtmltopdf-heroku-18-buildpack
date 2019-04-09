@@ -1,4 +1,4 @@
-# wkhtmltopdf Buildpack
+# wkhtmltopdf heroku-18 Buildpack
 
 This is a [Heroku buildpack][0] for bundling a compatible [wkhtmltopdf][1]
 binary with your environment.
