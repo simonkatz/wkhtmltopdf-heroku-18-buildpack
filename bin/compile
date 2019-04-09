@@ -36,7 +36,7 @@ else
 fi
 
 echo "-----> Unpacking deb: dpkg -x $WKHTMLTOPDF_DEB $WKHTMLTOPDF_TAR"
-dpkg -x $WKHTMLTOPDF_DEB $WKHTMLTOPDF_TAR
+dpkg -x $WKHTMLTOPDF_DEB $CACHE_DIR
 
 echo "-----> Unpacking tar: tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH"
 tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH 
