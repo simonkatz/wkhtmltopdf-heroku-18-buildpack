@@ -39,8 +39,8 @@ $ heroku repo:purge_cache -a appname
 ```
 
 ### Example
-See an example of a Rails app using wicked_pdf on Heroku-18:
-https://github.com/chap/wicked-pdf-heroku-18
+See an example of a [Rails app using wicked_pdf on heroku-18](https://github.com/chap/wicked-pdf-heroku-18).
+
 
 ### Credits
 
