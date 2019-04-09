@@ -21,7 +21,7 @@ fi
 WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
 WKHTMLTOPDF_DEB="$CACHE_DIR/wkhtmltox.deb"
 WKHTMLTOPDF_TAR="$CACHE_DIR/data.tar.xz"
-WKHTMLTOPDF_PATH="$TMP_PATH/wkhtmltox"
+WKHTMLTOPDF_PATH="$TMP_PATH/usr/local"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/bin"
 WKHTMLTOPDF_LIBS="$WKHTMLTOPDF_PATH/lib"
 
@@ -36,10 +36,10 @@ else
 fi
 
 echo "-----> Unpacking deb: dpkg -x $WKHTMLTOPDF_DEB $CACHE_DIR"
-dpkg -x $WKHTMLTOPDF_DEB $CACHE_DIR
+dpkg -x $WKHTMLTOPDF_DEB $TMP_PATH
 
-echo "-----> Unpacking tar: tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH"
-tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH 
+# echo "-----> Unpacking tar: tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH"
+# tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH 
 
 echo "-----> Setting permissions"
 chmod +x $WKHTMLTOPDF_BINARIES/*
