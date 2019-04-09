@@ -35,7 +35,7 @@ else
   curl -L $WKHTMLTOPDF_URL -o $WKHTMLTOPDF_DEB
 fi
 
-echo "-----> Unpacking deb: dpkg -x $WKHTMLTOPDF_DEB $WKHTMLTOPDF_TAR"
+echo "-----> Unpacking deb: dpkg -x $WKHTMLTOPDF_DEB $CACHE_DIR"
 dpkg -x $WKHTMLTOPDF_DEB $CACHE_DIR
 
 echo "-----> Unpacking tar: tar -xf $WKHTMLTOPDF_TAR -C $TMP_PATH"
