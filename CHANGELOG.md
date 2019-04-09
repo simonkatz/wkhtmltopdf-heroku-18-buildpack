@@ -1,4 +1,3 @@
-# 0.2
+# 0.1
 
-* Remove all of the forked ruby buildpack code. Change the buildpack to be used
-  in conjunction with `heroku-buildpack-multi`.
+* Use the Bionic (Ubuntu 18.04) source for wkhtmltopdf.
