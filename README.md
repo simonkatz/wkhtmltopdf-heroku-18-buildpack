@@ -19,7 +19,7 @@ $ heroku buildpacks:add https://github.com/chap/wkhtmltopdf-heroku-18-buildpack 
 ```
 
 If you want to use a `wkhtmltopdf` version other than the default set
-`WKHTMLTOPDF_VERSION`:
+`WKHTMLTOPDF_DOWNLOAD_URL`:
 
 ```bash
 heroku config:set WKHTMLTOPDF_DOWNLOAD_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
