@@ -35,6 +35,7 @@ fi
 
 echo "-----> Unpacking deb"
 dpkg -x $WKHTMLTOPDF_DEB $TMP_PATH
+dpkg -x "http://ppa.launchpad.net/linuxuprising/libpng12/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1+1~ppa0~focal_amd64.deb" $TMP_PATH
 
 echo "-----> Setting permissions"
 chmod +x $WKHTMLTOPDF_BINARIES/*
