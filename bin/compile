@@ -18,6 +18,9 @@ else
   WKHTMLTOPDF_DOWNLOAD_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
 fi
 
+LIBPNG12_DOWNLOAD_URL="http://ppa.launchpad.net/linuxuprising/libpng12/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1+1~ppa0~focal_amd64.deb"
+LIBPNG12_DEB="$CACHE_DIR/libpng12.deb"
+
 WKHTMLTOPDF_DEB="$CACHE_DIR/wkhtmltox.deb"
 WKHTMLTOPDF_PATH="$TMP_PATH/usr/local"
 WKHTMLTOPDF_BINARIES="$WKHTMLTOPDF_PATH/bin"
@@ -33,9 +36,11 @@ else
   curl -L $WKHTMLTOPDF_DOWNLOAD_URL -o $WKHTMLTOPDF_DEB
 fi
 
+curl -L $LIBPNG12_DOWNLOAD_URL -o $LIBPNG12_DEB
+
 echo "-----> Unpacking deb"
 dpkg -x $WKHTMLTOPDF_DEB $TMP_PATH
-dpkg -x "http://ppa.launchpad.net/linuxuprising/libpng12/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1.1+1~ppa0~focal_amd64.deb" $TMP_PATH
+dpkg -x $LIBPNG12_DEB $TMP_PATH
 
 echo "-----> Setting permissions"
 chmod +x $WKHTMLTOPDF_BINARIES/*
